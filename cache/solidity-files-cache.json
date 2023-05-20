@@ -1,0 +1,500 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\mibra\\Documents\\BlocksDev\\arbitrage_contract\\contracts\\Arbitrage.sol": {
+      "lastModificationDate": 1684572934331,
+      "contentHash": "f2a7acd34fd2cdbfe5ff47e7af03fb77",
+      "sourceName": "contracts/Arbitrage.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./FlashLoan/FlashLoanReceiverBase.sol",
+        "./FlashLoan/Interfaces.sol",
+        "./FlashLoan/Libraries.sol",
+        "./FlashLoan/Interfaces.sol",
+        "./utils/Initializable.sol",
+        "./ISwapRouter.sol",
+        "./IUniswapV2Router.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Arbitrage"
+      ]
+    },
+    "C:\\Users\\mibra\\Documents\\BlocksDev\\arbitrage_contract\\contracts\\FlashLoan\\FlashLoanReceiverBase.sol": {
+      "lastModificationDate": 1673345440158,
+      "contentHash": "949783ffd0a6206621cf1c1f45074c5b",
+      "sourceName": "contracts/FlashLoan/FlashLoanReceiverBase.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Interfaces.sol",
+        "./Libraries.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "FlashLoanReceiverBase"
+      ]
+    },
+    "C:\\Users\\mibra\\Documents\\BlocksDev\\arbitrage_contract\\contracts\\FlashLoan\\Interfaces.sol": {
+      "lastModificationDate": 1684525776564,
+      "contentHash": "328fe2726796073dae2b17a2a7f277ec",
+      "sourceName": "contracts/FlashLoan/Interfaces.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Libraries.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "IERC20",
+        "IFlashLoanReceiver",
+        "ILendingPool",
+        "ILendingPoolAddressesProvider",
+        "TransferHelper"
+      ]
+    },
+    "C:\\Users\\mibra\\Documents\\BlocksDev\\arbitrage_contract\\contracts\\FlashLoan\\Libraries.sol": {
+      "lastModificationDate": 1673345440161,
+      "contentHash": "dd4490827eac31048a381bc8b8114208",
+      "sourceName": "contracts/FlashLoan/Libraries.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Interfaces.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Address",
+        "DataTypes",
+        "SafeERC20",
+        "SafeMath",
+        "TransferHelper"
+      ]
+    },
+    "C:\\Users\\mibra\\Documents\\BlocksDev\\arbitrage_contract\\contracts\\IUniswapV2Router.sol": {
+      "lastModificationDate": 1684522906914,
+      "contentHash": "f286b4f506cb7f71321ee53a3abbb2fa",
+      "sourceName": "contracts/IUniswapV2Router.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "IUniswapV2Router02"
+      ]
+    },
+    "C:\\Users\\mibra\\Documents\\BlocksDev\\arbitrage_contract\\contracts\\ISwapRouter.sol": {
+      "lastModificationDate": 1684564116699,
+      "contentHash": "e2954eec17d2e9e817184e9a50a5b158",
+      "sourceName": "contracts/ISwapRouter.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IUniswapV3SwapCallback.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.9"
+      ],
+      "artifacts": [
+        "ISwapRouter"
+      ]
+    },
+    "C:\\Users\\mibra\\Documents\\BlocksDev\\arbitrage_contract\\contracts\\IUniswapV3SwapCallback.sol": {
+      "lastModificationDate": 1673345440163,
+      "contentHash": "c876fa68206fab22ed2b067cb4d70fec",
+      "sourceName": "contracts/IUniswapV3SwapCallback.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.9"
+      ],
+      "artifacts": [
+        "IUniswapV3SwapCallback"
+      ]
+    },
+    "C:\\Users\\mibra\\Documents\\BlocksDev\\arbitrage_contract\\contracts\\Context.sol": {
+      "lastModificationDate": 1673345440156,
+      "contentHash": "9e788fe22ac9e1bf9d63cf8e2c3b635d",
+      "sourceName": "contracts/Context.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "C:\\Users\\mibra\\Documents\\BlocksDev\\arbitrage_contract\\contracts\\DataTypes.sol": {
+      "lastModificationDate": 1673345440157,
+      "contentHash": "5d56c3a28cc47f2384d215e7b0ce2b82",
+      "sourceName": "contracts/DataTypes.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.9"
+      ],
+      "artifacts": [
+        "DataTypes"
+      ]
+    },
+    "C:\\Users\\mibra\\Documents\\BlocksDev\\arbitrage_contract\\contracts\\ILendingPoolAddressesProvider.sol": {
+      "lastModificationDate": 1673345440162,
+      "contentHash": "4e9dc911fc4b5c8246e43d60961ddfe3",
+      "sourceName": "contracts/ILendingPoolAddressesProvider.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.9"
+      ],
+      "artifacts": [
+        "ILendingPoolAddressesProvider"
+      ]
+    },
+    "C:\\Users\\mibra\\Documents\\BlocksDev\\arbitrage_contract\\contracts\\IPoolAddressesProvider.sol": {
+      "lastModificationDate": 1673345440162,
+      "contentHash": "8620fb275a3eb3412caf7d5a8d9f0b3d",
+      "sourceName": "contracts/IPoolAddressesProvider.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IPoolAddressesProvider"
+      ]
+    },
+    "C:\\Users\\mibra\\Documents\\BlocksDev\\arbitrage_contract\\contracts\\utils\\Initializable.sol": {
+      "lastModificationDate": 1684412455891,
+      "contentHash": "e2445803528d4ad5a6486974ba961229",
+      "sourceName": "contracts/utils/Initializable.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./AddressUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
+    },
+    "C:\\Users\\mibra\\Documents\\BlocksDev\\arbitrage_contract\\contracts\\utils\\AddressUpgradeable.sol": {
+      "lastModificationDate": 1684412455890,
+      "contentHash": "0a39c79bbedd7c0f701842399948bea5",
+      "sourceName": "contracts/utils/AddressUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AddressUpgradeable"
+      ]
+    }
+  }
+}

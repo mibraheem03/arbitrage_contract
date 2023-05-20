@@ -10,10 +10,14 @@
   "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
-    "hardhat": "^2.14.0",
     "@studydefi/money-legos": "^2.4.1",
     "@sushiswap/sdk": "^3.0.0",
     "@uniswap/sdk": "^3.0.0",
-    "bignumber.js": "^9.0.1"
+    "bignumber.js": "^9.0.1",
+    "dotenv": "^16.0.3",
+    "hardhat": "^2.14.0"
+  },
+  "dependencies": {
+    "@openzeppelin/hardhat-upgrades": "^1.26.0"
   }
 }

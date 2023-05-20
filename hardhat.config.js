@@ -1,4 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("@openzeppelin/hardhat-upgrades");
+require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -22,7 +24,7 @@ module.exports = {
     },
     goerli: {
       url: "https://eth.getblock.io/7644f21a-996e-4ce3-a87e-3db911718d8f/goerli/",
-      //accounts: [process.env.PRIVATE_KEY],
+      accounts: [process.env.PRIVATE_KEY],
       chainId: 5,
     },
   },

@@ -4,11 +4,12 @@ import {FlashLoanReceiverBase} from "./FlashLoan/FlashLoanReceiverBase.sol";
 import {ILendingPool, ILendingPoolAddressesProvider, IERC20} from "./FlashLoan/Interfaces.sol";
 import {SafeMath} from "./FlashLoan/Libraries.sol";
 import {TransferHelper} from "./FlashLoan/Interfaces.sol";
+import "./utils/Initializable.sol";
 
 import "./ISwapRouter.sol";
 import "./IUniswapV2Router.sol";
 
-contract Arbitrage is FlashLoanReceiverBase {
+contract Arbitrage is FlashLoanReceiverBase, Initializable {
     using SafeMath for uint256;
     address constant swapRouterAddressV2 =
         0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45;
@@ -25,6 +26,10 @@ contract Arbitrage is FlashLoanReceiverBase {
     constructor(
         ILendingPoolAddressesProvider _addressProvider
     ) public FlashLoanReceiverBase(_addressProvider) {}
+
+    // function initialize(address _addressProvider) external initializer {
+    //     FlashLoanReceiverBase(_addressProvider);
+    // }
 
     /**
      * @dev Users can invoke this function Get FlashLoan.
