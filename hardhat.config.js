@@ -17,13 +17,13 @@ module.exports = {
   networks: {
     hardhat: {
       forking: {
-        url: `https://eth.getblock.io/7644f21a-996e-4ce3-a87e-3db911718d8f/mainnet/`,
+        url: ``,
         // blockNumber: 16867730,
       },
       allowUnlimitedContractSize: true,
     },
     goerli: {
-      url: "https://eth.getblock.io/7644f21a-996e-4ce3-a87e-3db911718d8f/goerli/",
+      url: "",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 5,
     },
@@ -31,6 +31,6 @@ module.exports = {
   etherscan: {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
-    apiKey: "3IQDCVUY55AFAMN5IPXVVCDT9WVTISN6XX",
+    apiKey: "",
   },
 };

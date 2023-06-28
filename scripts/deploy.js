@@ -8,7 +8,7 @@ const hre = require("hardhat");
 const { ethers, upgrades } = require("hardhat");
 
 async function main() {
-  const aaveLendingAddress = "0xB53C1a33016B2DC2fF3653530bfF1848a515c8c5";
+  const aaveLendingAddress = "0x5E52dEc931FFb32f609681B8438A51c675cc232d";
   const Arbitrage = await hre.ethers.getContractFactory("Arbitrage");
   // const ArbitrageContract = await upgrades.deployProxy(Arbitrage, [aaveLendingAddress], { initializer: "initialize" });
   const ArbitrageContract = await Arbitrage.deploy(aaveLendingAddress, { gasLimit: 5000000 });

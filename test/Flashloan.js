@@ -1,6 +1,7 @@
 const { time, loadFixture } = require("@nomicfoundation/hardhat-network-helpers");
 const { anyValue } = require("@nomicfoundation/hardhat-chai-matchers/withArgs");
 const { expect } = require("chai");
+const { ethers } = require("hardhat");
 
 describe("Lock", function () {
   // We define a fixture to reuse the same setup in every test.
@@ -54,7 +55,10 @@ describe("Lock", function () {
       const amountToBorrow = "1000000000";
       const amount2 = "1000000000";
       const uniswapv2Path = ["0xdAC17F958D2ee523a2206206994597C13D831ec7", "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"];
-
+      const tetherToken = await ethers.getContractAt("IERC20", borrowAsset);
+      const holder = "0xF977814e90dA44bFA03b6295A0616a897441aceC";
+      const holderSigner = await ethers.getImpersonatedSigner(holder);
+      await tetherToken.connect(holderSigner).transfer(ArbitrageContract.address, amount2);
       const uniswapv3Path = getPath(uniswapv2Path, "3000");
       const side = "uniswapv3";
       console.log(uniswapv3Path);
