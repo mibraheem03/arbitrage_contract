@@ -17,13 +17,13 @@ module.exports = {
   networks: {
     hardhat: {
       forking: {
-        url: ``,
+        url: `https://mainnet.infura.io/v3/571a476709e840489f546ce9b6b5544a`,
         // blockNumber: 16867730,
       },
       allowUnlimitedContractSize: true,
     },
     goerli: {
-      url: "",
+      url: "https://goerli.infura.io/v3/571a476709e840489f546ce9b6b5544a",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 5,
     },

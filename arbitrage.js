@@ -4,18 +4,35 @@ const ArbitrageContractABI = require("./abis/ArbitrageContract.json");
 const IERC20ABI = require("./abis/IERC20.json");
 
 (async () => {
-  const provider = new ethers.providers.JsonRpcProvider(process.env.NODE);
+  const provider = new ethers.providers.JsonRpcProvider(
+    "https://goerli.infura.io/v3/571a476709e840489f546ce9b6b5544a"
+  );
   const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
-  const ArbitrageContractAddress = "0x604EA43AbB42f71C1DD356E008c2C44bAC3c8835"; // Your Contract Address
-  const ArbitrageContract = await ethers.getContractAt(ArbitrageContractABI, ArbitrageContractAddress);
-  const borrowAsset = "0xdAC17F958D2ee523a2206206994597C13D831ec7"; // Token You have to borrow -- Currently its USDT
-  const amountToBorrow = "1000000000"; //Amount to Borrow, Keep the decimal value in Check
-  const amount2 = "1000000000"; // This Amount will be for your calculation, how much you want to buy
-  const uniswapv2Path = ["0xdAC17F958D2ee523a2206206994597C13D831ec7", "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"];
-  const uniswapv3Path = getPath(uniswapv2Path, "3000");
+  const ArbitrageContractAddress = "0x62be37Cde62097E6DEE98aC7CC4f7d72Dd0748E1"; // Your Contract Address
+  const ArbitrageContract = await ethers.getContractAt(
+    ArbitrageContractABI,
+    ArbitrageContractAddress
+  );
+  const borrowAsset = "0x65aFADD39029741B3b8f0756952C74678c9cEC93"; // Token You have to borrow -- Currently its USDT
+  const amountToBorrow = "1000000"; //Amount to Borrow, Keep the decimal value in Check
+  const amount2 = "1000000"; // This Amount will be for your calculation, how much you want to buy
+  const uniswapv2Path = [
+    "0x2E8D98fd126a32362F2Bd8aA427E59a1ec63F780",
+    "0x65aFADD39029741B3b8f0756952C74678c9cEC93",
+  ];
+  const uniswapv3Path = getPath(uniswapv2Path, "500");
   const side = "uniswapv3";
 
-  const tnx = await ArbitrageContract.connect(wallet).populateTransaction.arbitrageLogic(borrowAsset, amountToBorrow, amount2, uniswapv3Path, uniswapv2Path.reverse(), side);
+  const tnx = await ArbitrageContract.connect(
+    wallet
+  ).callStatic.arbitrageLogic(
+    borrowAsset,
+    amountToBorrow,
+    amount2,
+    uniswapv3Path,
+    uniswapv2Path.reverse(),
+    side
+  );
   const response = await wallet.sendTransaction(tnx);
   const reciept = await response.wait();
 })();
